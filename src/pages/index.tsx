@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                 <button className='btn btn-danger' onClick={() => remove(product.id)} >Delete</button>
               </td>
               <td>
-                <button className='btn btn-warning'>Edit</button>
+                <a href={`/products/edit-product/${product.id}`} className='btn btn-warning'>Edit</a>
               </td>
             </tr>
           ))}
