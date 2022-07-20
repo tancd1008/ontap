@@ -20,7 +20,9 @@ const editProduct = () => {
 		readProduct(id).then((res) => reset(res))
 	}, [id])
     const onSubmit: SubmitHandler<any> = async (data) => {
-		updateProduct(data)
+		updateProduct(data);
+    alert('Sua thanh cong')
+    router.push('/')
 	}
   return (
     <div>

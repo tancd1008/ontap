@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import { useRouter } from 'next/router'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import useProduct from '../../hooks/use-product'
@@ -9,10 +10,13 @@ type InputType = {
 }
 
 const addProduct = () => {
+    const router = useRouter();
     const {register, handleSubmit, formState: {errors}} = useForm<InputType>();
     const { data: products, error, create } = useProduct()
     const onSubmit: SubmitHandler<InputType> = async (data) => {
-		create(data)
+      create(data)
+      alert("Them thanh cong!")
+      router.push('/');
 	}
   return (
     <div>

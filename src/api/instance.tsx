@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "http://localhost:3001",
+    baseURL: "https://62d7603e49c87ff2af35c79e.mockapi.io",
 });
 instance.interceptors.response.use(
     function (response) {

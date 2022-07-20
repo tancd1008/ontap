@@ -35,6 +35,7 @@ const Home: NextPage = () => {
         </tbody>
       </table>
       <a href='products/add-product' className='btn btn-success'>Create</a>
+
     </div>
   )
 }
